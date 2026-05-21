@@ -246,9 +246,6 @@ The script tracks Explorer windows through multiple methods:
 - Polling backup system for reliability
 - Ctrl+Shift+T cycling intentionally allows duplicates for quick access
 
----
-
-
 ___
 
 ### ⭐EXPLORER HISTORY TRACKER ALPHA RELEASE
@@ -260,8 +257,40 @@ ___
 
 ##  ✅TRAY MENU
 ![A6 Settings](Images/A6.png)
-___
 
+
+---
+
+## ✨ What's New — Alpha Release (26-05-20)
+
+### 🖥️ History GUI
+A dedicated dark-themed window displays your full closed folder history in a sortable list (Time · Item · Path). Double-click any entry to reopen it instantly, or use multi-select + **Reopen Selected** to restore several folders at once. The window is resizable and columns scale with it. A **Clear History** button wipes the list after confirmation.
+
+### ⚙️ Settings GUI
+A clean dark settings panel lets you customize everything without touching any files:
+- Rebind the **Toggle History**, **Reopen Last**, and **Settings** hotkeys (supports `^` Ctrl, `!` Alt, `+` Shift, `#` Win)
+- Toggle **Remove from history when restored** — controls whether restoring a folder removes it from the list
+- Toggle **Log all restored folders** — appends every restore with a date/time stamp to `RestoreLog.txt`
+
+Settings are saved to `ExplorerHistorySettings.ini` and hotkeys re-register instantly on save.
+
+### 🗂️ Tray Menu
+Right-clicking the tray icon gives quick access to:
+- **Explorer History** — opens the History GUI
+- **History submenu** — lists recent closed folders with timestamps; click any entry to restore it with a confirmation prompt
+- **Settings** — opens the Settings GUI
+- **Exit**
+
+### 🔁 Cycle / Smart Restore (Hotkey)
+The reopen hotkey (`Ctrl+Shift+T` by default) now has two smart modes depending on your settings:
+
+- **Remove on Restore OFF (Cycle mode):** Each press cycles through history in order, skipping already-opened folders. Once all unopened entries have been restored, pressing again cycles through the opened ones and switches focus to the matching Explorer window — no duplicate windows.
+- **Remove on Restore ON:** Each press reopens the next folder in history and removes it from the list. Skips paths that are already open. Shows a tooltip with the item number and path being restored.
+
+### 📝 Restore Log
+When logging is enabled, every restored folder is silently appended to `RestoreLog.txt` with a full `yyyy-MM-dd HH:mm:ss` timestamp — useful for auditing or recovering your workflow history.
+
+---
 
 
 Perfect for power users who frequently navigate multiple folders and want browser-like convenience in Windows Explorer!
