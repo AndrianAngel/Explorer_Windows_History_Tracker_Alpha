@@ -248,4 +248,20 @@ The script tracks Explorer windows through multiple methods:
 
 ---
 
+
+___
+
+### ⭐EXPLORER HISTORY TRACKER ALPHA RELEASE
+___
+
+##  🔗Setting
+![A5 Settings](Images/A5.png)
+___
+
+##  ✅TRAY MENU
+![A6 Settings](Images/A6.png)
+___
+
+
+
 Perfect for power users who frequently navigate multiple folders and want browser-like convenience in Windows Explorer!
